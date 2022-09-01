@@ -1,0 +1,95 @@
+.background{
+     background-color: #f8f8f8;
+}
+
+form{
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+span{
+    display: block;
+}
+
+h3{
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+.label{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.input{
+    margin-top: 5px;
+    width: 100%;
+    padding: 15px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.button{
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;  
+    margin-top: 15px;
+    background-color: purple;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+select{
+    margin-top: 5px;
+    width: 100%;
+    padding: 15px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.button:hover {
+    background-color: darkmagenta;
+}
+
+.twitch-channel{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.twitch-button{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;  
+    margin-top: 15px;
+    background-color: purple;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.thumbnail{
+    height: 15%;
+    border-radius: 50%;
+}
+
+.profile_image{
+    display: block;
+}
+
+.form-user{
+    display: none;
+}
+
+.form-follow{
+    display: none;
+}

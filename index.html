@@ -1,0 +1,76 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body class="background">
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active"  data-bs-toggle="tab" data-bs-target="#canais" href="#canais" type="button" role="tab" aria-controls="canais-tab" aria-selected="true"><b>Pesquisar Canais</b></button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link"  data-bs-toggle="tab" data-bs-target="#seguidos" href="#seguidos" type="button" role="tab" aria-controls="seguidos-tab" aria-selected="false"><b>Canais seguidos</b></button>
+        </li>
+    </ul>
+
+    <div class="tab-content pt-5" id="myTabContent">
+        <div class="tab-pane fade show active" id="canais" role="tabpanel" aria-labelledby="canais-tab">
+            <!-- Buscar canais Conteúdo Tab-->
+            <form class="form-search" method="POST">
+                <label class="label">Buscar canais</label>
+                <input type="text" class="input" name="query" id="query" placeholder="Informe o nome do canal que deseja seguir">
+                <button class="button">Pesquisar</button>
+            </form>
+        </div>  
+
+        <div class="tab-pane fade" id="seguidos" role="tabpanel" aria-labelledby="seguidos-tab">
+            <!-- Canais seguidos conteúdo Tab-->
+            <form class="form-auth">
+                <button class="button">Conectar com a Twitch</button>
+            </form>
+            <form class="form-user">
+                <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Perfil do Usuário</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Meu Perfil</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form class="form-follow" method="POST">
+                <input type="hidden" id="token">
+                <input type="hidden" id="user_id">
+                <button class="button">Canais Seguidos</button>
+            </form>
+        </div> 
+    </div>
+
+    <div class="container">
+        <div id="result_search"></div>
+        <div id="result_follow_channels"></div>
+    </div>
+
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
